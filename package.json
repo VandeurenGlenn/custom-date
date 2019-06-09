@@ -1,0 +1,20 @@
+{
+  "name": "@vandeurenglenn/custom-date",
+  "version": "1.0.1",
+  "module": "custom-date.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Glenn Vandeuren <vandeurenglenn@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vandeurenglenn/custom-date.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vandeurenglenn/custom-date/issues"
+  },
+  "homepage": "https://github.com/vandeurenglenn/custom-date#readme",
+  "description": ""
+}
