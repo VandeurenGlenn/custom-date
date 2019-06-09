@@ -1,7 +1,7 @@
 export default customElements.define('custom-date', class CustomDate extends HTMLElement {
 
   static get observedAttributes() {
-    return ['day', 'month', 'year', 'date', 'value'];
+    return ['day', 'month', 'year', 'date', 'value', 'lang'];
   }
 
   get months() {
@@ -9,9 +9,16 @@ export default customElements.define('custom-date', class CustomDate extends HTM
   }
 
   get days() {
-    return ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+    if (this.lang === 'nl') return ['zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag']
+    return ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
   }
-
+  set lang(value) {
+    this._lang = value;
+    this.render()
+  }
+  get lang() {
+    return this._lang;
+  }
   set value(value) {
     this._value = value;
     this.setAttribute('value', value);
