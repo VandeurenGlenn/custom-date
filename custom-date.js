@@ -85,13 +85,16 @@ export default customElements.define('custom-date', class CustomDate extends HTM
   }
 
   render() {
-    this.innerHTML = `
+    this.shadowRoot.innerHTML = `
     <style>
-      custom-date {
+      :host {
         display: flex;
         width: 110px;
       }
-      custom-date div, custom-date span {
+      .flex {
+        flex: 1;
+      }
+      :host div, :host span {
         pointer-events: none;
       }
     </style>
@@ -107,6 +110,7 @@ export default customElements.define('custom-date', class CustomDate extends HTM
 
   constructor() {
     super();
+    this.attachShadow({mode: 'open'})
   }
 
   connectedCallback() {
