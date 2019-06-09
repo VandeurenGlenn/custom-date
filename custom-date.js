@@ -96,7 +96,7 @@ export default customElements.define('custom-date', class CustomDate extends HTM
     <style>
       :host {
         display: flex;
-        width: 110px;
+        width: 140px;
       }
       .flex {
         flex: 1;
@@ -108,9 +108,9 @@ export default customElements.define('custom-date', class CustomDate extends HTM
     <div>${this.days[this.day]}</div>
     <span class="flex"></span>
     <div>${this.date}</div>
-    <span class="flex"></span>
-    <div>${this.months[this.month]}</div>
-    <span class="flex"></span>
+    -
+    <div>${this.month}</div>
+    -
     <div>${this.year}</div>
     `;
   }
