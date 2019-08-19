@@ -78,7 +78,7 @@ export default customElements.define('custom-date', class CustomDate extends Dat
     <span class="flex"></span>
     <div>${super.date}</div>
     -
-    <div>${super.month}</div>
+    <div>${Number(super.month) === 0 ? 1 : super.month + 1}</div>
     -
     <div>${super.year}</div>
     `;
